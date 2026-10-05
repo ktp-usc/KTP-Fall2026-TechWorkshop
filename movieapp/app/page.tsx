@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Header from "./components/Header";
+import MovieCard from "./components/MovieCard"
+import NavBar from "./components/NavBar"
+
 // import MovieCard from "./components/MovieCard";
 import { movies } from "./data/movies";
 import MovieCard from "./components/MovieCard";
@@ -19,6 +22,9 @@ export default function Home() {
           <MovieCard key={movie.id} {...movie} />;
         })}
       </div> */}
+     <Header></Header>
+     <NavBar pageTitle="Home" link="/" />
+
     </div>
   );
 }

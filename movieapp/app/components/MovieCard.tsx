@@ -36,24 +36,15 @@
 //   );
 // }
 //test
-//test
-
-// data Shape
-// {
-//         "imageUrl": "https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
-//         "title": "Whiplash",
-//         "genre": "Drama",
-//         "lengthMinutes": 107,
-//         "releaseYear": 2014
-//     },
-
+//
 type MovieProp = {
-  imageUrl: string;
-  title: string;
-  genre: string;
-  lengthMinutes: Number;
-  releaseYear: Number;
+  imageUrl : string;
+  title : string;
+  lengthMinutes : number;
+  releaseYear : number;
+  genre : string;
 };
+
 export default function MovieCard({
   imageUrl,
   title,
@@ -62,11 +53,16 @@ export default function MovieCard({
   releaseYear,
 }: MovieProp) {
   return (
-    <div className="bg-slate-900 w-fit p-4 rounded-2xl">
-      <img className="w-24" src={imageUrl}></img>
+    <div className="rounded-lg border-slate-600">
+      <img src={imageUrl} className="rounded-lg"></img>
       <h1>{title}</h1>
       <h1>{genre}</h1>
       <h1>{lengthMinutes}</h1>
+      <h1>{releaseYear}</h1>
     </div>
-  );
+  )
 }
+
+
+
+
