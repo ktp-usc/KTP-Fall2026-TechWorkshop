@@ -4,7 +4,7 @@ type headerProp = {
   search: string;
   setSearch: (arg1: string) => void;
 };
-export default function Header() {
+export default function Header({ search, setSearch }: headerProp) {
   return (
     <div className="bg-slate-900 p-4 flex justify-between items-center">
       <div className="flex items-center gap-4">
@@ -20,6 +20,8 @@ export default function Header() {
           <input
             className="focus:outline-none"
             placeholder="Search movies..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           ></input>
         </div>
       </div>
