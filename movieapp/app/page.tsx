@@ -3,7 +3,6 @@ import Image from "next/image";
 import Header from "./components/Header";
 import MovieCard from "./components/MovieCard";
 import { movies } from "./data/movies";
-import MovieCard from "./components/MovieCard";
 import { useState, useEffect } from "react";
 import GenreFilter from "./components/Genre";
 export default function Home() {
