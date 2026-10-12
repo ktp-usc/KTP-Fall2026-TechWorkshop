@@ -26,6 +26,13 @@ export async function GET() {
     },
   );
   const data = await tmdbResponse.json();
+  const movies = data.results.map((movie: any) => ({
+    id: movie.id,
+    title: movie.title,
+    imageUrl: movie.poster_path
+      ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+      : null,
+  }));
 
-  return Response.json(data);
+  return Response.json(movies);
 }
